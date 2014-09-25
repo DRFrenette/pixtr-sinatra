@@ -2,6 +2,13 @@
 
 <A href="/galleries/<%= @gallery.id %>/edit">Edit_Gallery</a>
 
+<form action ="/galleries/<%= @gallery.id %>" method="POST">
+  <input type="hidden" name="_method" value="DELETE">
+
+  <input type="submit" value="Delete Gallery" />
+</form>
+
+
 <ul>
   <% @images.each do |image| %>
     <img src="<%= image.url %>" />
